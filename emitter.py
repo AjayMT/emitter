@@ -14,7 +14,8 @@ class Emitter:
         if not event:
             listeners = self._listeners
         else:
-            listeners[event] = self._listeners[event]
+            if event in self._listeners:
+                listeners[event] = self._listeners[event]
 
         for k, v in listeners.items():
             for l in v:
@@ -22,6 +23,9 @@ class Emitter:
                     self._listeners[k].remove(l)
 
     def emit(self, event, *args):
+        if event not in self._listeners:
+            return
+
         for l in self._listeners[event]:
             l[0](*args)
             if l[1]:

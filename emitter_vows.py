@@ -43,3 +43,7 @@ class Emitter(Vows.Context):
         topic.remove()
         expect(topic._listeners['foo']).to_be_empty()
         expect(topic._listeners['bar']).to_be_empty()
+
+    def should_work_with_unknown_events(self, topic):
+        topic.emit('quux')
+        topic.remove('wut')

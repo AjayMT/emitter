@@ -1,5 +1,7 @@
 
 # emitter
+[![Build Status](https://travis-ci.org/AjayMT/emitter.svg)](https://travis-ci.org/AjayMT/emitter)
+
 A simple event emitter for python.
 
 ## Installation
