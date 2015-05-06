@@ -2,7 +2,7 @@
 from fnmatch import fnmatch
 
 
-class Emitter:
+class Emitter(object):
     def __init__(self):
         """Event emitter class."""
         self._listeners = {}
