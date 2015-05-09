@@ -63,6 +63,7 @@ class Emitter(object):
 
         for ev, v in events.items():
             for l in v:
-                l[0](*args)
                 if l[1]:
                     self._listeners[ev].remove(l)
+
+                l[0](*args)
