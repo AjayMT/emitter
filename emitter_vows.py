@@ -47,3 +47,9 @@ class Emitter(Vows.Context):
     def should_work_with_unknown_events(self, topic):
         topic.emit('quux')
         topic.remove('wut')
+
+    def should_provide_listeners(self, topic):
+        def cb(): pass
+
+        topic.on('quux', cb)
+        expect(topic.listeners('quux')).to_equal([cb])

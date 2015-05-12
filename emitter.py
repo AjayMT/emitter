@@ -16,10 +16,12 @@ class Emitter(object):
         Arguments:
         event -- Event name. Can be a glob pattern.
         """
-        cbs = [ls for e, ls in self._listeners.items()
-               if fnmatch(event, e) or fnmatch(e, event)]
+        def lsum(l): return l[0] + lsum(l[1:]) if l else []
 
-        return [l[0] for l in ls for ls in cbs]
+        cbs = lsum([ls for e, ls in self._listeners.items()
+                    if fnmatch(event, e) or fnmatch(e, event)])
+
+        return [l[0] for l in cbs]
 
     def on(self, event, cb, once=False):
         """Add an event listener.

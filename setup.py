@@ -4,12 +4,12 @@ from distutils.core import setup
 
 setup(
     name='emitter',
-    version='0.0.5',
+    version='0.0.6',
     description='simple event emitter',
     author='Ajay MT',
     author_email='ajaymt@icloud.com',
     url='http://github.com/ajaymt/emitter',
-    download_url='https://github.com/AjayMT/emitter/tarball/v0.0.5',
+    download_url='https://github.com/AjayMT/emitter/tarball/v0.0.6',
     py_modules=['emitter'],
     keywords='emitter event eventemitter node',
     classifiers=[
