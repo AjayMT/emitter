@@ -20,7 +20,7 @@ See `./emitter_test.py` for some example usage.
 
 ## Running tests
 ```
-$ pyvows
+$ nosetests
 ```
 
 ## License
