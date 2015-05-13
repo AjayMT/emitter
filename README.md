@@ -15,7 +15,8 @@ $ python setup.py install
 
 ## Docs
 `help(emitter.Emitter)` should explain things.
-See `./emitter_vows.py` for some example usage.
+
+See `./emitter_test.py` for some example usage.
 
 ## Running tests
 ```
